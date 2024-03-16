@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cpe</title>
+    <style>
+        #example1{
+            border: 1px ;
+            width: 100%;
+            height: 100vh;
+            background-image: url("pexels-tuur-tisseghem-812264-removebg-preview.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-clip: border-box;
+            position: relative;
+        }
+        body {
+            /*background-color: blue;*/
+        height:100%;
+        margin:0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        position:relative;
+        overflow:hidden;
+        }
+        .loading{
+            color: red;
+            top: 40%;
+            left: 20%;
+            z-index: 2;
+            animation: load 1s linear infinite,scaleChange 5s linear infinite;
+            width: 100vw;
+            display: flex;
+            buttom: 0;
+            /*align-items: center;*/
+            position: absolute;
+        }
+        @keyframes load {
+
+            from {
+                transform: translateX(10%);
+            }
+
+            to {
+                transform: translateX(42%);
+            }
+        }
+        @keyframes scaleChange { /*動畫名稱為 scaleChange*/
+            from {font-size: small}
+            to   {font-size: x-large}
+        }
+        .wait{
+            text-shadow: 1px 1px 3px white;
+
+
+            color: skyblue;
+            top: 30%;
+            left: 20%;
+            z-index: 2;
+            animation: wait 5s linear infinite;
+            width: 100vw;
+            display: flex;
+            buttom: 0;
+            /*align-items: center;*/
+            position: absolute;
+        }
+        @keyframes wait {
+
+            from {
+                transform: translateX(10%);
+            }
+
+            to {
+                transform: translateX(37%);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="example1">
+        <b class="wait">please waiting</b>
+        <b class="loading">loading</b>
+    </div>
+</body>
+</html>
